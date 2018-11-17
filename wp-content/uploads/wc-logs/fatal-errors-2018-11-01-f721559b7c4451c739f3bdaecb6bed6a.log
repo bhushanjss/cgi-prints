@@ -1,0 +1,4 @@
+2018-11-01T08:33:45+00:00 CRITICAL Out of memory (allocated 79429632) (tried to allocate 1461311 bytes) in /home2/admin076/public_html/wp-includes/functions.php on line 351
+
+2018-11-01T08:38:10+00:00 CRITICAL Out of memory (allocated 79691776) (tried to allocate 1461311 bytes) in /home2/admin076/public_html/wp-includes/functions.php on line 351
+
