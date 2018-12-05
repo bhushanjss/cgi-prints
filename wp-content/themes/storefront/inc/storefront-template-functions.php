@@ -125,16 +125,17 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 	function storefront_credit() {
 		?>
 		<div class="site-info">
-			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
+			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; '. date( 'Y' ) . ' '. get_bloginfo( 'name' ) ) ); ?>
 			<?php if ( apply_filters( 'storefront_credit_link', true ) ) { ?>
-			<br />
+			<?php echo '<span href="https://woocommerce.com" target="_blank" title="' . esc_attr__( 'WooCommerce - The Best eCommerce Platform for WordPress', 'storefront' ) . '" rel="author">' . esc_html__( ', LLC. Built with Storefront &amp; WooCommerce. Some Rights Reserved. ', 'storefront' ) . '</span>' ?>
+			<?php } ?>
 			<?php
 				if ( apply_filters( 'storefront_privacy_policy_link', true ) && function_exists( 'the_privacy_policy_link' ) ) {
-					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
+					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>
+						<a href="/terms-and-conditions" >Terms of Service</a>
+					' );
 				}
 			?>
-			<?php echo '<a href="https://woocommerce.com" target="_blank" title="' . esc_attr__( 'WooCommerce - The Best eCommerce Platform for WordPress', 'storefront' ) . '" rel="author">' . esc_html__( 'Built with Storefront &amp; WooCommerce', 'storefront' ) . '</a>.' ?>
-			<?php } ?>
 		</div><!-- .site-info -->
 		<?php
 	}
